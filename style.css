@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-size: cover;
+    height: 100vh;
+    font-family: roboto;
+}
+
+
+.curvature{
+    border-bottom-right-radius: 35%;
+    border-bottom-left-radius: 35%;
+    height: 140px;
+    width: 100%;
+    margin: 0;
+    background-image: linear-gradient( to right,rgb(22, 54, 95), rgb(112, 169, 240),rgb(0, 26, 77));
+}
+
+.class-todo{
+    display: flex;
+    margin:0 auto;
+    justify-content: center;
+}
+
+.nameTask, .addTask{
+    margin-top: 50px;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    
+}
+
+.nameTask{
+    width: 220px;
+}
+
+
+.addTask{
+    margin-left: px;
+    background: none;
+    border: none;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.list ul li{
+    margin-top: 30px;
+    list-style-type: none;
+    background-image: linear-gradient( to right,rgb(22, 54, 95), rgb(112, 169, 240),rgb(0, 26, 77));
+    padding: 30px;
+    width: 300px;
+    height: 100px;
+    border-radius: 8px;
+    color: white;
+}
+
+.fa-plus{
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#alert-message{
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+.part-img{
+    justify-content: center;
+    text-align: center;
+    display: block;
+}
+
+img{
+    margin-top: 50px;
+}
+
+#first-phrase, #second-phrase{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
