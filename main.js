@@ -24,9 +24,7 @@ button.addEventListener('click', () => {
 
     let btnElement = document.createElement('button')
     btnElement.innerHTML = `<i class="fa-solid fa-trash"></i>`
-    btnElement.style.background = 'none'
-    btnElement.style.marginLeft = '320px'
-    btnElement.style.border = 'none'
+    btnElement.style.cssText = "background:none; margin-left: 320px; border:none"
     btnElement.addEventListener('click', () => {
         ul.removeChild(liElement)
         ul.removeChild(btnElement)
@@ -49,8 +47,8 @@ button.addEventListener('click', () => {
 
     if (input.value === "") {
 
-        input.style.border = "1px solid"
-        input.style.borderColor = "#cf0e0e"
+        input.style.cssText = "border:1px solid; border-color: #cf0e0e"
+
         ul.removeChild(liElement)
         ul.removeChild(btnElement)
 
