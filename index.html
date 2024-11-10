@@ -17,7 +17,7 @@
     <span><i class="fas fa-user"></i> Olá, Marcelo</span>
     <h1>Lista de Tarefas</h1>
     <button class="bars"><i class="fas fa-bars"></i></button>
-    
+
 </div>
 
 <div class="app-interface">
@@ -39,11 +39,23 @@
 
 <div class="details-task">
     <div class="box">
-        <input type="text" id="nameTask" placeholder="ex. Ir a academia"><br>
-        <input type="text" id="description" placeholder="adicione uma descricão"><br>
-        <button id="addTask">Adicionar</button>
-        <button id="cancelTask">Cancelar</button>
+        <h1 class="title-box">Adicionar Tarefa</h1>
+        <div class="content">
+            <p class="first">Digite a Tarefa:</p><input type="text" id="nameTask" placeholder="ex. Ir a academia">
+            <p class="warning" id="warningMessage">Digite a tarefa para continuar!</p>
+            <p class="second">Descreva a Tarefa (opcional):</p><input type="text" id="description" placeholder="adicione uma descricão"><br>
+            <div class="btns">
+            <button id="cancelTask">Cancelar</button>
+            <button id="addTaskList">Adicionar</button>
+        </div>
+        </div>
     </div>
+</div>
+
+<div class="list">
+    <ul class="localTask" id="list-task">
+
+    </ul>
 </div>
 
 <script src="main.js"></script>
