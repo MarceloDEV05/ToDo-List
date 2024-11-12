@@ -24,11 +24,24 @@ btnAddTask.addEventListener('click', () => {
     img.style.display = 'none'
 
     const li = document.createElement('li')
-    li.innerHTML = `<li>${inputTask.value}</li>`
+    
+    li.innerHTML = `<input type="checkbox" class="check"><p>${inputTask.value}</p>`
     console.log(li)
 
+    const checkbox = li.querySelector('.check')
+    checkbox.addEventListener('click', () => {
+        if(checkbox.checked){
+            li.style.cssText = 'text-decoration:line-through; color:gray;' 
+        }else{
+            li.style.cssText =  'color:white;'
+        }
+        
+    })
+
+  
     listTask.appendChild(li)
     tasks.push(listTask)
 
     modalTask.style.display="none"
+    inputTask.value = ""
 })
