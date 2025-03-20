@@ -6,17 +6,14 @@ const openModalTask = document.getElementById('addTask')
 const closeModalTask = document.getElementById('cancelTask')
 const listTask = document.getElementById('list-task')
 const inputDescription = document.getElementById('description')
-const btn = document.getElementById("btnRemove")
 
 
 let tasks = []
-
 
 openModalTask.addEventListener('click', () => {
     modalTask.style.display = "block"
 
 })
-
 
 closeModalTask.addEventListener('click', () => {
     modalTask.style.display = 'none'
@@ -53,6 +50,8 @@ btnAddTask.addEventListener('click', () => {
         listTask.removeChild(li)
         img.style.display = 'block'
     })
+
+    btn.style.cssText = 'padding:10px; border-radius:8px; border:none;'
 
     modalTask.style.display="none"
     inputTask.value = ""
