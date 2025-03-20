@@ -5,7 +5,7 @@ const modalTask = document.querySelector('.details-task')
 const openModalTask = document.getElementById('addTask')
 const closeModalTask = document.getElementById('cancelTask')
 const listTask = document.getElementById('list-task')
-const trash = li.querySelector("fa-trash")
+const inputDescription = document.getElementById('description')
 
 let tasks = []
 
@@ -26,12 +26,10 @@ btnAddTask.addEventListener('click', () => {
 
     const li = document.createElement('li')
     
-    li.innerHTML = `<input type="checkbox" class="check"><p>${inputTask.value}</p> <button id="btnTrash"><i class="fas fa-trash"></i></button>`
+    li.innerHTML = `<input type="checkbox" class="check"><p>${inputTask.value}</p></br> <p>${inputDescription.value}</p>`
     console.log(li)
 
-    
-
-    const checkbox = li.querySelector('.check')
+  const checkbox = li.querySelector('.check')
     checkbox.addEventListener('click', () => {
         if(checkbox.checked){
             li.style.cssText = 'text-decoration:line-through; color:gray;' 
@@ -47,8 +45,4 @@ btnAddTask.addEventListener('click', () => {
 
     modalTask.style.display="none"
     inputTask.value = ""
-})
-
-trash.addEventListener('click', ()=> {
-    listTask.removeChild(li)
 })
