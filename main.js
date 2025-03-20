@@ -6,6 +6,8 @@ const openModalTask = document.getElementById('addTask')
 const closeModalTask = document.getElementById('cancelTask')
 const listTask = document.getElementById('list-task')
 const inputDescription = document.getElementById('description')
+const btn = document.getElementById("btnRemove")
+
 
 let tasks = []
 
@@ -26,7 +28,10 @@ btnAddTask.addEventListener('click', () => {
 
     const li = document.createElement('li')
     
-    li.innerHTML = `<input type="checkbox" class="check"><p>${inputTask.value}</p></br> <p>${inputDescription.value}</p>`
+    li.innerHTML = `<input type="checkbox" class="check"><p>${inputTask.value}</p></br> 
+    <p>${inputDescription.value}</p>
+     <button id="btnRemove">remover</button>`
+
     console.log(li)
 
   const checkbox = li.querySelector('.check')
@@ -43,6 +48,14 @@ btnAddTask.addEventListener('click', () => {
     listTask.appendChild(li)
     tasks.push(listTask)
 
+    let btn = document.getElementById('btnRemove')
+    btn.addEventListener("click", () => {
+        listTask.removeChild(li)
+        img.style.display = 'block'
+    })
+
     modalTask.style.display="none"
     inputTask.value = ""
+
+   
 })
